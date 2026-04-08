@@ -4,9 +4,11 @@ import os
 import json
 import webbrowser
 from datetime import datetime
+import urllib3
+urllib3.disable_warnings(urllib3.exceptions.NotOpenSSLWarning)
 
 # --- CONFIGURAÇÃO ---
-FILE_PATH = os.path.abspath("propostas_encontradas.html")
+FILE_PATH = "/Users/laryssagomes/BotWorkana/propostas_encontradas.html"
 
 def create_html_report(projects):
     """Gera uma página HTML simples com os links das propostas"""
